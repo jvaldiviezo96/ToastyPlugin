@@ -30,10 +30,10 @@ public class ToastyPlugin extends CordovaPlugin {
         duration = options.getString("duration");
 
         byte[] filedata=Base64.getDecoder().decode(message);
-        byte[] gifBytes;
-          gifBytes = Jnbis.wsq().decode(filedata)
-                          .toJpeg()
-                          .asByteArray();
+        byte[] gifBytes=Jnbis.wsq()
+        				.decode(filedata)
+        				.toGif()
+        				.asByteArray();
           String encode = new String(Base64.getEncoder().encode(filedata));
         message = "el mensaje es :"+encode;
 
