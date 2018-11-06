@@ -28,13 +28,13 @@ public class ToastyPlugin extends CordovaPlugin {
         JSONObject options = args.getJSONObject(0);
         message = options.getString("message");
         duration = options.getString("duration");
-*/
+
+/*
         byte[] filedata=Base64.getDecoder().decode(message);
         byte[] gifBytes=Jnbis.wsq().decode(filedata).toGif().asByteArray();
           String encode = new String(Base64.getEncoder().encode(filedata));
         message = "el mensaje es :" + encode;
-
-/*
+*/
 
       } catch (JSONException e) {
         callbackContext.error("Error encountered: " + e.getMessage());
